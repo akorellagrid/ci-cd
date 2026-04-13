@@ -13,6 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - run: docker build . -t akorellagrid/CI-CD:latest
+    - run: docker build . -t akorellagrid/ci-cd:latest
     - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin 
-    - run: docker push akorellagrid/CI-CD:latest
+    - run: docker push akorellagrid/ci-cd:latest
