@@ -15,4 +15,4 @@ jobs:
     - uses: actions/checkout@v4
     - run: docker build . -t akorellagrid/ci-cd:latest
     - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin 
-    - run: ddocker push aadityakorella/ci-cd:tagname
+    - run: docker push aadityakorella/ci-cd:tagname
